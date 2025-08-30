@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student registration</title>
+</head>
+<body>
+    <h1>Student registration portal</h1>
+    <p> Review available courses in the table below, 
+        then complete the registration form.
+    </p>
+    
+    <h2>
+        Available courses
+    </h2>
+
+    <table border="1" width="100%">
+        <caption> 
+            Computer Science Department Courses - A.Y 2026
+        </caption>
+        <tr>
+            <td rowspan="2">Course Code</td>
+            <td rowspan="2">Course Name</td>
+            <td colspan="2">Schedule</td>
+        </tr>
+        <tr>
+            <td>Day</td>
+            <td>Time</td>
+        </tr>
+
+        <tr>
+            <td>CS101</td>
+            <td>Introduction to Programming</td>
+            <td>Mon & Wed</td>
+            <td>9:00 AM - 10:00 AM</td>
+        </tr>
+
+        <tr>
+            <td>CS102</td>
+            <td>Web Development Basics</td>
+            <td>Tue & Thu</td>
+            <td>1:00 pm - 2:00 pm</td>
+        </tr>
+
+        <tr>
+            <td>CS103</td>
+            <td>Database Systems</td>
+            <td rowspan="2">Fri</td>
+            <td>10:00 AM - 12:00 NN</td>
+        </tr>
+
+        <tr>
+            <td>CS104</td>
+            <td>Computer Network</td>
+            <td>1:00 pm - 3:00 pm</td>
+        </tr>
+    </table>
+
+    <form action="./submitted.html" method="post">
+        <fieldset>
+            <legend>
+                <h2>Registration form</h2>
+            </legend>
+
+            <!-- Name -->
+
+            <label for="name">Full Name:</label>
+            <input 
+            id="name" 
+            name="name" 
+            type="Text" 
+            placeholder="Lname, Fname, M.I"
+            required            
+            /> 
+            <br />
+            <br />
+
+            <!-- Email -->
+
+            <label for="email">Email address:</label>
+            <input 
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+            />
+            <br />
+            <br />
+
+            <!-- Radio -->
+
+            <p>Year Level:</p>
+            <input type="radio" name="year" id="first" value="1st Year" required />
+            <label for="first">1st Year</label> <br />
+
+            <input type="radio" name="year" id="second" value="2nd Year" />
+            <label for="second">2nd Year</label> <br />
+
+            <input type="radio" name="year" id="third" value="3rd Year" >
+            <label for="third">3rd Year</label> <br />
+
+            <input type="radio" name="year" id="fourth" value="4th Year" />
+            <label for="fourth">4th Year</label> <br />
+            
+            <!-- Check box -->
+
+            <p>Preferred Study Mode (Optional)</p>
+            <input type="checkbox" id="online" name="mode" value="Online" />
+            <label for="online">Online</label> <br />
+
+            <input type="checkbox" id="onsite" name="mode" value="Onsite" />
+            <label for="onsite">Onsite</label> <br />
+            <br />
+            <br />
+            
+            <!-- Dropdown -->
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value=""> --Choose a course-- </option>
+                <option value="CS101">CS101 - Introduction to Programming</option>
+                <option value="CS102">CS102 - Web Development Basics</option>
+                <option value="CS103">CS103 - Database Systems</option>
+                <option value="CS104">CS104 - Computer Network</option>              
+            </select>
+            <br />
+            <br />
+
+            <!-- Textarea -->
+
+            <label for="comments">Additional Note:</label> 
+            <br />
+            <textarea
+            for="comments" 
+            id="comments" 
+            rows="4" 
+            cols="40" 
+            placeholder="Enter any additional comments, request or notes here..."
+            ></textarea>
+            <br />
+            <br />
+
+            <!-- button -->
+            <button type="submit">Register</button>
+            <button type="reset">Clear Form</button>
+        </fieldset>
+    </form>
+</body>
+</html>
